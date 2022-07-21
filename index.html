@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#tabs-nav li:first-child').addClass('active');
+            $('.tab-content').hide();
+            $('.tab-content:first').show();
+
+            // Click function
+            $('#tabs-nav li').click(function () {
+                $('#tabs-nav li').removeClass('active');
+                $(this).addClass('active');
+                $('.tab-content').hide();
+
+                var activeTab = $(this).find('a').attr('href');
+                $(activeTab).fadeIn();
+                return false;
+            });
+        });
+        window.onload = function () {
+            var xValues = ["Bitcoin", "Ethereum", "Monero"];
+            var yValues = [30, 50, 20];
+            var barColors = [
+                "#9a00f8",
+                "#cfa5e9",
+                "#dfd3e7"
+
+            ];
+            new Chart("myChart", {
+                type: "doughnut",
+                data: {
+                    labels: xValues,
+                    datasets: [{
+                        backgroundColor: barColors,
+                        data: yValues
+                    }]
+                },
+                options: {
+
+                    responsive: true,
+                    legend: {
+                        labels: {
+                            usePointStyle: true,
+                        },
+                        position: 'right',
+                        pointStyle: 'circle',
+
+                    },
+                    title: {
+                        display: true,
+
+                    }
+                }
+            });
+        }
+
+        //Months
+
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            var ctx1 = document.getElementById('myChart2').getContext('2d');
+            var chart = new Chart(ctx1, {
+                // The type of chart we want to create
+                type: 'line', // also try bar or other graph types
+
+                // The data for our dataset
+                data: {
+                    labels: ["Jan ", "Feb ", "Mar ", "Apr ", "May "],
+                    // Information about the dataset
+                    datasets: [{
+                        label: "Rainfall",
+                        borderColor: '#9a00f8',
+                        backgroundColor: '#dfd3e7',
+                        data: [26.4, 39.8, 66.8, 66.4, 40.6],
+                    }]
+                },
+
+                // Configuration options
+                options: {
+                    legend: { display: false },
+                    layout: {
+                        padding: 10,
+                    },
+                    scales: {
+                        yAxes: [{
+                            display: false,
+
+                        }]
+                    }
+                }
+            });
+        })
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            var ctx1 = document.getElementById('myChart3').getContext('2d');
+            var chart = new Chart(ctx1, {
+                // The type of chart we want to create
+                type: 'line', // also try bar or other graph types
+
+                // The data for our dataset
+                data: {
+                    labels: ["Jan ", "Feb ", "Mar ", "Apr ", "May "],
+                    // Information about the dataset
+                    datasets: [{
+                        label: "Rainfall",
+                        borderColor: '#9a00f8',
+                        backgroundColor: '#dfd3e7',
+                        data: [26.4, 31.8, 44.8, 36.4, 40.6],
+                    }]
+                },
+
+                // Configuration options
+                options: {
+                    legend: { display: false },
+                    layout: {
+                        padding: 10,
+                    },
+                    scales: {
+                        yAxes: [{
+                            display: false,
+
+                        }]
+                    }
+                }
+            });
+        })
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            var ctx1 = document.getElementById('myChart4').getContext('2d');
+            var chart = new Chart(ctx1, {
+                // The type of chart we want to create
+                type: 'line', // also try bar or other graph types
+
+                // The data for our dataset
+                data: {
+                    labels: ["Jan ", "Feb ", "Mar ", "Apr ", "May "],
+                    // Information about the dataset
+                    datasets: [{
+                        label: "Rainfall",
+                        borderColor: '#9a00f8',
+                        backgroundColor: '#dfd3e7',
+                        data: [12.4, 31.8, 4.8, 36.4, 20.6],
+                    }]
+                },
+
+                // Configuration options
+                options: {
+                    legend: { display: false },
+                    layout: {
+                        padding: 10,
+                    },
+                    scales: {
+                        yAxes: [{
+                            display: false,
+
+                        }]
+                    }
+                }
+            });
+        })
+
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            var ctx1 = document.getElementById('myChart5').getContext('2d');
+            var chart = new Chart(ctx1, {
+                // The type of chart we want to create
+                type: 'line', // also try bar or other graph types
+
+                // The data for our dataset
+                data: {
+                    labels: ["Jan ", "Feb ", "Mar ", "Apr ", "May", "June", "July", "Aug", "Sept", "Oct"],
+                    // Information about the dataset
+                    datasets: [{
+                        label: "Rainfall",
+                        borderColor: '#9a00f8',
+                        backgroundColor: '#dfd3e7',
+                        data: [12.4, 31.8, 4.8, 36.4, 20.6, 12.4, 31.8, 4.8, 36.4, 4.4],
+                    }]
+                },
+
+                // Configuration options
+                options: {
+                    legend: { display: false },
+                    layout: {
+                        padding: 10,
+                    },
+                    scales: {
+                        yAxes: [{
+                            display: false,
+
+                        }]
+                    }
+                }
+            });
+        })
+
+    </script>
+    <link rel="stylesheet" href="css/InterviewTask.css">
+    <title>InterviewTask</title>
+
+</head>
+
+<body>
+    <div class="parentWrapper tabs">
+        <div class="leftWrapper">
+            <ul id="tabs-nav" class="leftWrapper">
+                <li><a href="#tab1"><i class="fa fa-table"></i></a></li>
+                <li><a href="#tab2"><i class="fa fa-suitcase"></i></a></li>
+                <li><a href="#tab3"><i class="fa fa-arrow-right"></i></a></li>
+                <li><a href="#tab4"><i class="fa fa-filter"></i></a></li>
+            </ul> <!-- END tabs-nav -->
+        </div>
+        <div class="midWrapper" id="tabs-content">
+            <div id="tab1" class="tab-content">
+                <div class="container1">
+                    <div class="leftheader">
+                        <i class="fa fa-info"></i>
+                        Exchange Not Connected
+                    </div>
+                    <div class="rightheader">
+                        Trial Subscription-7 more days left
+                        <button type="button" style="border:2px solid rgb(214, 15, 164); border-radius: 5px;color:rgb(214, 15, 164);
+                    font-weight: bold;font-size: 10px;">Renew Subscription</button>
+                    </div>
+                </div>
+                <div class="container2">
+                    <div class="balance1">
+                        <p> Balance</p>
+                        <button type="button" class="balbtn">2.043454 BTC</button>
+                        <h3>$25,200.70</h3>
+                        <div class="investment">
+                            <span>Invested</span>
+                            <h6>$10,458.00</h6>
+                            <span>%Profit</span>
+                            <h6>+60%</h6>
+                            <span>USD Profit</span>
+                            <h6>$15648.38</h6>
+                        </div>
+                        <button type="button" class="balAddbtn">Add Exchange</button>
+
+                    </div>
+                    <div class="balance2">
+                        <div class="bal2img">
+                            <canvas id="myChart" style="width:430px; height: 270px;"></canvas>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="portfolioWrapper">
+                    <div class="portbox1">
+                        <canvas id="myChart2"></canvas>
+                    </div>
+                    <div class="portbox2">
+                        <canvas id="myChart3"></canvas>
+                    </div>
+                    <div class="portbox3">
+                        <canvas id="myChart4"></canvas>
+                    </div>
+
+                </div>
+
+                <div class="chartWrapper">
+                    <div class="chartbox1">
+                        <canvas id="myChart5"  style="max-height: 200px;" ></canvas>
+                    </div>
+                    <div class="chartbox2">
+                        <div class="trans1">
+                            <span>Transactions</span>
+                            <button type="button" class="transbtn">See all</button>
+
+                        </div>
+                        <div class="trans1">
+                            <span>Buy</span>
+                            <span>Apr 20,2020</span>
+
+
+                        </div>
+                        <div class="trans1">
+                            <span>Sell</span>
+                            <span>Apr 20,2020</span>
+                        </div>
+                        <div class="trans1">
+                            <span>Sell</span>
+                            <span>Apr 20,2020</span>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+            <div id="tab2" class="tab-content">2</div>
+                <div id="tab3" class="tab-content">3</div>
+                <div id="tab4" class="tab-content">4</div>
+           
+
+        </div>
+        <div class="rightWrapper">
+            <div class="rightbox1">
+                <img class="img1" src="userimage.jpg" alt="" height="60px" width="60px">
+                <div class="profileText">
+                    <p>Good Morning, Ivan!</p>
+                    <span class="status">Settings</span>
+                </div>
+            </div>
+            <div class="rightbox2">
+                <ul class="activitybox">Recent Activity
+
+                    <li class="actOdd">1837 USD = 0.084 BTC</li>
+                    <li class="actEven">1 BTC = 8468 USD</li>
+                    <li class="actOdd">1837 USD = 0.084 BTC</li>
+                    <li class="actEven">1 BTC = 8468 USD</li>
+                    <li class="actOdd">1837 USD = 0.084 BTC</li>
+                    <li class="actEven">1 BTC = 8468 USD</li>
+
+                </ul>
+            </div>
+
+            <div class="rightbox3">
+                <h3>Exchange</h3>
+
+                <select name="" class="exopt">
+                    <option value="USD">USD</option>
+                    <option value="BTC">BTC</option>
+                </select>
+
+            </div>
+            <input type="text" class="input1" placeholder="1,700.00 USD">
+            <input type="text" class="input2" placeholder="0.674931 BTC">
+
+            <div class="rightbox4">
+                <i class="fa fa-envelope-open-text"></i>
+                <!-- <i class="fab fa-mail-bulk"></i> -->
+                <p>Invite customers and</p><br>
+                <p>get $10 for each</p><br>
+                <button type="button" class="mailbtn">Send Invitation</button>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+    </head>
+    <body></body>
+</html>
